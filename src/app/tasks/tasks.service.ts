@@ -5,8 +5,10 @@ import { Task } from './task.model';
   providedIn: 'root' // makes the service available app-wide
 })
 
-export class TasksService {
-  tasks = signal<Task[]>([]);
+export class  TasksService {
+  private tasks = signal<Task[]>([]);
+
+  allTasks = this.tasks.asReadonly();
 
 
   addTask(taskData: {title: string; description: string}) {
