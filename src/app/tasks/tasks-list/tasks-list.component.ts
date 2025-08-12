@@ -8,7 +8,7 @@ import { TasksService } from '../tasks.service';
   standalone: true,
   templateUrl: './tasks-list.component.html',
   styleUrl: './tasks-list.component.css',
-  imports: [TaskItemComponent],
+  imports: [TaskItemComponent]
 })
 export class TasksListComponent {
   private tasksService = inject(TasksService);
